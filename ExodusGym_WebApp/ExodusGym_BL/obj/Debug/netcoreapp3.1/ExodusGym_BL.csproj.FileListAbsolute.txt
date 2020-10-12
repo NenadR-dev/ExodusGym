@@ -1,0 +1,12 @@
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\bin\Debug\netcoreapp3.1\ExodusGym_BL.deps.json
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\bin\Debug\netcoreapp3.1\ExodusGym_BL.dll
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\bin\Debug\netcoreapp3.1\ExodusGym_BL.pdb
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\bin\Debug\netcoreapp3.1\ExodusGym_DAL.dll
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\bin\Debug\netcoreapp3.1\ExodusGym_DAL.pdb
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.csprojAssemblyReference.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.AssemblyInfoInputs.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.AssemblyInfo.cs
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.csproj.CoreCompileInputs.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.csproj.CopyComplete
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.dll
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_BL\obj\Debug\netcoreapp3.1\ExodusGym_BL.pdb

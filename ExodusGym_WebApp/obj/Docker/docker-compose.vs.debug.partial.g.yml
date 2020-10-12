@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  exodusgym_api:
+    image: exodusgymapi:dev
+    container_name: ExodusGym_API
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "ExodusGym_API"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_exodusgym_api$
+    volumes:
+      - C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API:/app
+      - C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp:/src
+      - C:\Users\Nenad\vsdbg\vs2017u5:/remote_debugger:rw
+#$nuget_volume_mapping_exodusgym_api$
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_exodusgym_api$ \"/app/bin/Debug/netcoreapp3.1/ExodusGym_API.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
