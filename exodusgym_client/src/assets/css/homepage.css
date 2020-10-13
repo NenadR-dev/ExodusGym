@@ -1,0 +1,9 @@
+.centered {
+    height: 70vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.homepage{
+    background-color: dimgrey;
+}
