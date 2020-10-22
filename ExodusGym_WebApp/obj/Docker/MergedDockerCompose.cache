@@ -8,7 +8,11 @@ services:
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: exodusgymapi
     ports:
+    - published: 5000
+      target: 80
     - target: 80
+    - published: 5001
+      target: 443
     - target: 443
     volumes:
     - C:\Users\Nenad\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro

@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using ExodusGym_DAL.Enums;
 using ExodusGym_DAL.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -22,22 +23,22 @@ namespace ExodusGym_DAL
             _context.Database.Migrate();
 
             var _roleManager = _serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            if (!_context.Roles.Any(r => r.Name == "Admin"))
+            if (!_context.Roles.Any(r => r.Name == UserRoles.Admin))
             {
                 var store = new RoleStore<IdentityRole>(_context);
-                var role = new IdentityRole { Name = "Admin" };
+                var role = new IdentityRole { Name = UserRoles.Admin };
                 await _roleManager.CreateAsync(role);
             }
-            if (!_context.Roles.Any(r => r.Name == "Instructor"))
+            if (!_context.Roles.Any(r => r.Name == UserRoles.Instructor))
             {
                 var store = new RoleStore<IdentityRole>(_context);
-                var role = new IdentityRole { Name = "Instructor" };
+                var role = new IdentityRole { Name = UserRoles.Instructor };
                 await _roleManager.CreateAsync(role);
             }
-            if (!_context.Roles.Any(r => r.Name == "Client"))
+            if (!_context.Roles.Any(r => r.Name == UserRoles.Client))
             {
                 var store = new RoleStore<IdentityRole>(_context);
-                var role = new IdentityRole { Name = "Client" };
+                var role = new IdentityRole { Name = UserRoles.Client };
                 await _roleManager.CreateAsync(role);
             }
 
@@ -49,15 +50,15 @@ namespace ExodusGym_DAL
                 var Admin = new AppUser()
                 {
                     UserName = "admin",
-                    PasswordHash = AppUser.HashPassword("Admin123!"),
+                    //PasswordHash = AppUser.HashPassword("Admin123!"),
                     DateOfBirth = new DateTime(1996, 3, 5),
                     FirstName = "Nenad",
                     Lastname = "Radulovic",
                     ImageUrl = "",
                     Email = "admin@gmail.com"
                 };
-                await userManager.CreateAsync(Admin);
-                await userManager.AddToRoleAsync(Admin, "Admin");
+                await userManager.CreateAsync(Admin,"Admin123!");
+                await userManager.AddToRoleAsync(Admin, UserRoles.Admin);
             }
             _context.SaveChanges();
             Console.WriteLine("Seeding completed");

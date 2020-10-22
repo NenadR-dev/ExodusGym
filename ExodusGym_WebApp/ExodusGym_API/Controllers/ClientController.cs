@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using ExodusGym_API.Model;
 using ExodusGym_BL;
 using ExodusGym_BL.Exceptions;
@@ -18,12 +17,10 @@ namespace ExodusGym_API.Controllers
     public class ClientController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         //private readonly ClientLogic _clientLogic;
-        public ClientController(IUnitOfWork unitOfWork, IMapper mapper)
+        public ClientController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             //clientLogic = new ClientLogic(_unitOfWork);
         }
     }

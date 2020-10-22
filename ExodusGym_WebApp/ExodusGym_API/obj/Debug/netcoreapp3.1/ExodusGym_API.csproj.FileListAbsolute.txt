@@ -8,11 +8,7 @@ C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcor
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\staticwebassets\ExodusGym_API.StaticWebAssets.Manifest.cache
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\staticwebassets\ExodusGym_API.StaticWebAssets.xml
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\ExodusGym_API.exe
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.csproj.CopyComplete
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.csproj.CoreCompileInputs.cache
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\ExodusGym_API.deps.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\ExodusGym_API.runtimeconfig.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\ExodusGym_API.runtimeconfig.dev.json
@@ -75,3 +71,7 @@ C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcor
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.dll
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.pdb
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.genruntimeconfig.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.csproj.CoreCompileInputs.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.MvcApplicationPartsAssemblyInfo.cache

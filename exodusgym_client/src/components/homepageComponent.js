@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Footer from '../views/footer'
 import HomepageNavbar from '../views/homepage-navbar'
-import RegisterComponent from './register-component'
+import RegisterComponent from './registerComponent'
 import '../assets/css/homepage.css'
 export class HomepageComponent extends Component{
     constructor(props){

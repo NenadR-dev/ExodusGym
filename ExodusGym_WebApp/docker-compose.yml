@@ -3,9 +3,13 @@ version: '3.4'
 services:
   exodusgym_api:
     image: ${DOCKER_REGISTRY-}exodusgymapi
+    ports:
+    - "5000:80"
+    - "5001:443"
     build:
       context: .
       dockerfile: ExodusGym_API/Dockerfile
+    
   sql-server-exodusdb:
     container_name: sql-server-exodusdb
     image: mcr.microsoft.com/mssql/server:2017-latest

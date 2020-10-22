@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using ExodusGym_API.Model;
 using ExodusGym_BL;
 using ExodusGym_BL.Exceptions;
@@ -18,11 +17,9 @@ namespace ExodusGym_API.Controllers
     public class InstructorController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-        public InstructorController(IUnitOfWork unitOfWork, IMapper mapper)
+        public InstructorController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
         }
     }
 }
