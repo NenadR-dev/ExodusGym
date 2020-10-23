@@ -13,11 +13,19 @@ namespace ExodusGym_DAL
         public IClientRepository Client { get; set; }
         public IAchievementsRepository Achivemetns { get; set; }
 
-        public UnitOfWork(AppDbContext context)
+        public IWorkoutDayRepository WorkoutDay { get; set; }
+
+        public UnitOfWork(
+            AppDbContext context,
+            IClientRepository client,
+            IAchievementsRepository achievements,
+            IWorkoutDayRepository workoutDay
+            )
         {
             _context = context;
-            Client = new ClientRepository(_context);
-            Achivemetns = new AchievementsRepository(_context);
+            Client = client;
+            Achivemetns = achievements;
+            WorkoutDay = workoutDay;
         }
 
         public int Commit()

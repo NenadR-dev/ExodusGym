@@ -10,6 +10,8 @@ namespace ExodusGym_DAL
         IAchievementsRepository Achivemetns { get; }
         IClientRepository Client { get; }
 
+        IWorkoutDayRepository WorkoutDay { get; }
+
         int Commit();
     }
 }

@@ -16,6 +16,11 @@ namespace ExodusGym_DAL
         public DbSet<Achievements> AchievementsDb { get; set; }
         public DbSet<AppUser> AppUserDB { get; set; }
 
+        public DbSet<WorkoutDay> WorkoutDayDB { get; set; }
+
+        public DbSet<Meal> MealDB { get; set; }
+        public DbSet<DietPlan> DietPlanDB { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }

@@ -18,12 +18,12 @@ import { getUserRole } from './actions/homepageActions'
 const store = configureStore()
 const hist = createBrowserHistory()
 
-
 ReactDOM.render(
     <Provider store={store}>
       <Router history={hist}>
         <Switch>
           <Route path="/home" render={props=>{return <HomepageComponent/>}} />
+          <Route path="/client" render={props=>{return <ClientComponent/>}}/>
           <Redirect from="/" to="/home"/>
         </Switch>
       </Router>

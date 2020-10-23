@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\ExodusGym_DAL.csproj": {}
+    "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\ExodusGym_DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\ExodusGym_DAL.csproj": {
+    "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\ExodusGym_DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\ExodusGym_DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\ExodusGym_DAL.csproj",
         "projectName": "ExodusGym_DAL",
-        "projectPath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\ExodusGym_DAL.csproj",
+        "projectPath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\ExodusGym_DAL.csproj",
         "packagesPath": "C:\\Users\\Nenad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\obj\\",
+        "outputPath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZNhOfKYw/XJM3eq83OtfYjDvzJcVJsMZjUUf/vjHr5c1SeYqHeOGfBjHdmrZcL8R2CIp42R/WTahDe0Ja9COKQ==",
+  "dgSpecHash": "oGLADWDtdEVsXpYgIU3WDpuNLSsnsR0nYtSqNf4SUKw9wNiktNdBgDCLLR3Skb81bpS6bEjsUqEby2tF2XIYxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_DAL\\ExodusGym_DAL.csproj",
+  "projectFilePath": "C:\\Users\\Nenad\\Desktop\\ExodusGym\\ExodusGym_WebApp\\ExodusGym_Dal\\ExodusGym_DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nenad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.8\\microsoft.aspnetcore.cryptography.internal.3.1.8.nupkg.sha512",
     "C:\\Users\\Nenad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.8\\microsoft.aspnetcore.cryptography.keyderivation.3.1.8.nupkg.sha512",
