@@ -80,5 +80,10 @@ namespace ExodusGym_DAL.Repository
             Context.Entry(entity).State = EntityState.Modified;
             return entity;
         }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return DbSet.ToList();
+        }
     }
 }

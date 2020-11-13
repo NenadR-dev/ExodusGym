@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import {Navbar, Nav, Form, FormControl, Button, NavDropdown, Image, Modal } from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown, Image, OverlayTrigger } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../assets/images/exodus-logo.png"
-import LoginModal from "./login-modal";
-import { getUserRole, postLogoutRequest } from '../actions/homepageActions'
+import {postLogoutRequest } from '../actions/homepageActions'
 import {connect} from 'react-redux';
+import NotificationView from "./notification-view";
 
 export class ClientNavbar extends Component {
     constructor(props){
@@ -14,7 +14,6 @@ export class ClientNavbar extends Component {
         }
     }
   render() {
-    var bodyHandler = this.props.bodyHandler
     return (
       <>
         <Navbar bg="dark" variant="dark">
@@ -23,14 +22,16 @@ export class ClientNavbar extends Component {
             </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
+          <div>
           <Image
-              alt=""
-              src={logo}
-              width="30"
-              heigth="30"
-              className="d-inline-block align-top"
-              roundedCircle 
-            />
+                alt=""
+                src={logo}
+                width="30"
+                heigth="30"
+                className="d-inline-block align-top"
+                roundedCircle 
+              />
+          </div>
             <br/>
           <Nav>
               <NavDropdown title="Hello user" id="basic-nav-dropdown">

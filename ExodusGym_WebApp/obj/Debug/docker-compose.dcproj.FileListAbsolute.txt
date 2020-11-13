@@ -1,6 +1,5 @@
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\appsettings.Development.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\appsettings.json
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\Properties\launchSettings.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\ExodusGym_Api.exe
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\ExodusGym_Api.dll
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll

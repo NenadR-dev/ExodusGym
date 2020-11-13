@@ -60,42 +60,120 @@ namespace ExodusGym_DAL
                 await userManager.CreateAsync(Admin,"Admin123!");
                 await userManager.AddToRoleAsync(Admin, UserRoles.Admin);
             }
-            //POPUlATING WORKOUT DAYS
-            WorkoutDay workoutDay = new WorkoutDay()
+            //POPULATE MEALS
+            if(_context.MealDB.Count() == 0)
             {
-                Date = new DateTime(2020, 10, 10).Date,
-                DietPlan = new DietPlan()
+                List<Meal> meals = new List<Meal>()
+            {
+                new Meal()
                 {
-                    Meals = new List<Meal>()
-                    {
-                        new Meal()
-                        {
-                            Calories = 150,
-                            MealType = MealType.Breakfast,
-                            Description = "Bacon and eggs"
-                        },
-                        new Meal()
-                        {
-                            Calories = 650,
-                            Description = "BBQ Chicken wings with fries",
-                            MealType = MealType.Lunch
-                        },
-                        new Meal()
-                        {
-                            Calories = 200,
-                            Description = "Oatmeal with milk",
-                            MealType = MealType.Dinner
-                        },
-                        new Meal()
-                        {
-                            Calories = 50,
-                            Description = "BANANA",
-                            MealType = MealType.Snack
-                        }
-                    }
+                    Date = new DateTime(2020,11,17),
+                    Description = "Omlete",
+                    Calories = 150,
+                    MealType = MealType.Breakfast
+                },new Meal()
+                {
+                    Date = new DateTime(2020,11,14),
+                    Description = "Chicken wings",
+                    Calories = 320,
+                    MealType = MealType.Lunch
+                },new Meal()
+                {
+                    Date = new DateTime(2020,11,13),
+                    Description = "Noodles",
+                    Calories = 90,
+                    MealType = MealType.Breakfast
+                },new Meal()
+                {
+                    Date = new DateTime(2020,11,9),
+                    Description = "Hot dog",
+                    Calories = 190,
+                    MealType = MealType.Dinner
+                },new Meal()
+                {
+                    Date = new DateTime(2020,11,17),
+                    Description = "Banana split",
+                    Calories = 220,
+                    MealType = MealType.Snack
+                },new Meal()
+                {
+                    Date = new DateTime(2020,11,11),
+                    Description = "Friend chicken",
+                    Calories = 350,
+                    MealType = MealType.Lunch
                 }
             };
-            _context.WorkoutDayDB.Add(workoutDay);
+                _context.MealDB.AddRange(meals);
+            }
+            //POPULATE WORKOUTS
+            if(_context.WorkoutDb.Count() == 0)
+            {
+                var workout = new Workout()
+                {
+                    Name = "MyWorkouts",
+                    Description = "Home workout im doing in order to lose weight",
+                    Duration = "30 minutes",
+                    Intensity = "Begginer",
+                    Sets = "3",
+                    Type = WorkoutType.Individual,
+                    Dates = new List<WorkoutDate>()
+                    {
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,6)
+                        },
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,9)
+                        },
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,13)
+                        },
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,16)
+                        },
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,19)
+                        },
+                        new WorkoutDate()
+                        {
+                            Date = new DateTime(2020,11,23)
+                        }
+                    },
+                    Exercises = new List<Exercise>()
+                    {
+                        new Exercise()
+                        {
+                            Interval = "10 reps",
+                            Name = "Push-Ups"
+                        },
+                        new Exercise()
+                        {
+                            Interval = "20 secunds",
+                            Name = "Plank"
+                        },
+                        new Exercise()
+                        {
+                            Interval = "15 reps",
+                            Name = "Lunges"
+                        },
+                        new Exercise()
+                        {
+                            Interval = "20 reps",
+                            Name = "Squats"
+                        },
+                        new Exercise()
+                        {
+                            Interval = "10 reps",
+                            Name = "Sit-Ups"
+                        }
+                    }
+                };
+                _context.WorkoutDb.Add(workout);
+            }
             _context.SaveChanges();
             Console.WriteLine("Seeding completed");
         }

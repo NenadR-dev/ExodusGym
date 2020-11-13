@@ -13,13 +13,12 @@ namespace ExodusGym_DAL
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Client> ClientDb { get; set; }
+        public DbSet<WorkoutDate> WorkoutDatesDb { get; set; }
+        public DbSet<Workout> WorkoutDb { get; set; }
+        public DbSet<Exercise> ExerciseDb { get; set; }
         public DbSet<Achievements> AchievementsDb { get; set; }
         public DbSet<AppUser> AppUserDB { get; set; }
-
-        public DbSet<WorkoutDay> WorkoutDayDB { get; set; }
-
         public DbSet<Meal> MealDB { get; set; }
-        public DbSet<DietPlan> DietPlanDB { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

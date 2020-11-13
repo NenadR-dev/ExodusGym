@@ -12,20 +12,25 @@ namespace ExodusGym_DAL
         private readonly AppDbContext _context;
         public IClientRepository Client { get; set; }
         public IAchievementsRepository Achivemetns { get; set; }
-
-        public IWorkoutDayRepository WorkoutDay { get; set; }
+        public IWorkoutRepository Workout { get; set; }
+        public IExerciseRepository Exercise { get; set; }
+        public IMealRepository Meal { get; set; }
 
         public UnitOfWork(
             AppDbContext context,
             IClientRepository client,
             IAchievementsRepository achievements,
-            IWorkoutDayRepository workoutDay
+            IMealRepository meal,
+            IWorkoutRepository workout,
+            IExerciseRepository exercise
             )
         {
             _context = context;
             Client = client;
             Achivemetns = achievements;
-            WorkoutDay = workoutDay;
+            Meal = meal;
+            Workout = workout;
+            Exercise = exercise;
         }
 
         public int Commit()

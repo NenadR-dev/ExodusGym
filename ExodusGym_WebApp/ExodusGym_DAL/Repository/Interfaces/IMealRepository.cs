@@ -5,8 +5,7 @@ using System.Text;
 
 namespace ExodusGym_DAL.Repository.Interfaces
 {
-    public interface IWorkoutDayRepository : IRepository<WorkoutDay>
+    public interface IMealRepository : IRepository<Meal>
     {
-
     }
 }

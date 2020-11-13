@@ -40,7 +40,10 @@ namespace ExodusGym_API
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IAchievementsRepository, AchievementsRepository>();
             services.AddScoped<IAdminBL, AdminBL>();
-            services.AddScoped<IWorkoutDayRepository, WorkoutDayRepository>();
+            services.AddScoped<IClientBL, ClientBL>();
+            services.AddScoped<IMealRepository, MealRepository>();
+            services.AddScoped<IWorkoutRepository, WorkoutRepository>();
+            services.AddScoped<IExerciseRepository, ExerciseRepository>();
 
             services.AddCors(options =>
             {

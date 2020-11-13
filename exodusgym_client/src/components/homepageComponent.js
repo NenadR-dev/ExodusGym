@@ -12,9 +12,9 @@ export class HomepageComponent extends Component{
     }
     render(){
         let body;
-        if(this.state.bodyState == "Body"){
+        if(this.state.bodyState === "Body"){
             body = <p>HELLO BODY</p>
-        } else if(this.state.bodyState == "Register"){
+        } else if(this.state.bodyState === "Register"){
             body = <RegisterComponent/>
         } else{
             body = <p>Last else</p>
@@ -23,7 +23,7 @@ export class HomepageComponent extends Component{
             <>
                 <div className="homepage">
                     <HomepageNavbar bodyHandler={this.bodyHandler}/>
-                    {body}
+                    
                     <Footer/>
                 </div>
             </>
@@ -36,3 +36,4 @@ export class HomepageComponent extends Component{
         })
     }
 }
+export default HomepageComponent

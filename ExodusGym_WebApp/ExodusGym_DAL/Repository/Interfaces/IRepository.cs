@@ -17,5 +17,6 @@ namespace ExodusGym_DAL.Repository.Interfaces
         TEntity GetByID(int ID);
         TEntity Add(TEntity entity);
         TEntity Update(TEntity entity);
+        IEnumerable<TEntity> GetAll();
     }
 }

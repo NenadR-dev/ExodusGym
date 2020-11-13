@@ -9,8 +9,9 @@ namespace ExodusGym_DAL
     {
         IAchievementsRepository Achivemetns { get; }
         IClientRepository Client { get; }
-
-        IWorkoutDayRepository WorkoutDay { get; }
+        IWorkoutRepository Workout { get; }
+        IExerciseRepository Exercise { get; }
+        IMealRepository Meal { get; set; }
 
         int Commit();
     }

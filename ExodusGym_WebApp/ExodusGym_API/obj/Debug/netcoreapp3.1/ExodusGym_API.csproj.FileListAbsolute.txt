@@ -1,6 +1,5 @@
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.csprojAssemblyReference.cache
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.AssemblyInfoInputs.cache
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.AssemblyInfo.cs
@@ -75,3 +74,4 @@ C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcor
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.csproj.CoreCompileInputs.cache
 C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\ExodusGym_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nenad\Desktop\ExodusGym\ExodusGym_WebApp\ExodusGym_API\obj\Debug\netcoreapp3.1\scopedcss\bundle\ExodusGym_API.styles.css

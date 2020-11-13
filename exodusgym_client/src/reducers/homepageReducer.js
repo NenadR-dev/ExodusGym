@@ -1,4 +1,6 @@
 import axios from "axios";
+import axiosCookieJar from 'axios-cookiejar-support'
+import tough from 'tough-cookie'
 import { propTypes } from "react-bootstrap/esm/Image";
 import {
     POST_LOGIN_REQUEST,
@@ -11,14 +13,8 @@ import {
     GET_USER_ROLE
 } from '../actions/homepageTypes'
 
-const url = "https://localhost:5001/api/"
-const config ={
-    'Content-Type' : 'application-json',
-    'Access-Control-Allow-Origin' : '*',
-    'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-    'withCredentials' : "true"
-}
+import {config, url} from '../route'
+
 
 const homepageReducer = (state, action) => {
     switch(action.type){
@@ -26,6 +22,7 @@ const homepageReducer = (state, action) => {
             axios.post(url+"Account/Login",action.payload, config)
                 .then(response =>{
                     console.log(POST_LOGIN_SUCCESS+": " + response.data)
+                    console.log(window.Cookies.get("ExodusCookie"))
                 })
                 .catch(error=>{
                     console.log(POST_LOGIN_ERROR+": "+ error)

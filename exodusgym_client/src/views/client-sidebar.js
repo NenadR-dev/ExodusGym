@@ -28,12 +28,12 @@ import {
 } from "react-pro-sidebar";
 import "../assets/css/client.scss";
 import {
-  FaTachometerAlt,
   FaHome,
-  FaList,
-  FaSun,
-  FaRegLaughWink,
+  FaDumbbell,
   FaHeart,
+  FaBookOpen,
+  FaToggleOn,
+  FaToggleOff
 } from "react-icons/fa";
 
 export class ClientSidebar extends Component {
@@ -41,23 +41,47 @@ export class ClientSidebar extends Component {
     super(props);
     this.state = {
       showModal: false,
+      collapsed: false,
+      toggled: false
     };
   }
+
+  handleToggle = () => {
+    this.setState({toggled: !this.state.toggled})
+  }
+
+  handleCollapse = () => {
+    this.setState({collapsed: !this.state.collapsed})
+  }
   render() {
-    var bodyHandler = this.props.bodyHandler;
     return (
-      <>
-        <ProSidebar breakPoint="md">
+        <ProSidebar style={{heigth: "1400px"}} breakPoint="md" collapsed={this.state.collapsed} toggled={this.state.toggled} onToggle={this.handleToggle}>
+          <SidebarHeader>
+          <div
+          style={{
+            padding: '24px',
+            textTransform: 'uppercase',
+            fontWeight: 'bold',
+            fontSize: 14,
+            letterSpacing: '1px',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          {this.state.collapsed ? <FaToggleOff onClick={this.handleCollapse}/> : <FaToggleOn onClick={this.handleCollapse}/>}
+        </div>
+          </SidebarHeader>
+          <SidebarContent>
           <Menu iconShape="square">
-            <MenuItem icon={<FaHome />}>Dashboard</MenuItem>
-            <SubMenu title="My Journal" icon={<FaHeart />}>
-              <MenuItem>Diet plan</MenuItem>
-              <MenuItem>Workout plan</MenuItem>
+            <MenuItem icon={<FaHome />} onClick={() => this.props.toggleDayInfo("Calendar")}>Dashboard</MenuItem>
+            <SubMenu title="My Journal" icon={<FaBookOpen />}>
+              <MenuItem onClick={() => this.props.toggleDayInfo("Statistics")}>Statistics</MenuItem>
             </SubMenu>
-            <MenuItem icon={<FaSun/>}>TestComponent</MenuItem>
+            <MenuItem icon={<FaDumbbell/>} onClick={() => this.props.toggleDayInfo("PurchaseWorkout")}>Workouts</MenuItem>
           </Menu>
+          </SidebarContent>
         </ProSidebar>
-      </>
     );
   }
 

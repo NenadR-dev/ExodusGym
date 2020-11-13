@@ -6,9 +6,9 @@ using System.Text;
 
 namespace ExodusGym_DAL.Repository
 {
-    public class WorkoutDayRepository : BaseRepository<WorkoutDay>, IWorkoutDayRepository
+    public class MealRepository : BaseRepository<Meal>, IMealRepository
     {
-        public WorkoutDayRepository(AppDbContext _context) : base(_context)
+        public MealRepository(AppDbContext _context) : base(_context)
         {
         }
     }

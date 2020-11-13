@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import {Navbar, Nav, Form, FormControl, Button, NavDropdown, Image, Modal } from 'react-bootstrap'
+import {Navbar, Nav,   Button, NavDropdown, Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../assets/images/exodus-logo.png"
 import LoginModal from "./login-modal";

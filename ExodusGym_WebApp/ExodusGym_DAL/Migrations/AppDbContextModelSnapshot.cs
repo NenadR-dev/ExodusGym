@@ -136,26 +136,41 @@ namespace ExodusGym_DAL.Migrations
                     b.HasDiscriminator<string>("Discriminator").HasValue("AppUser");
                 });
 
-            modelBuilder.Entity("ExodusGym_DAL.Model.DietPlan", b =>
+            modelBuilder.Entity("ExodusGym_DAL.Model.Exercise", b =>
                 {
                     b.Property<int>("ID")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("TotalCalories")
+                    b.Property<string>("Interval")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("WorkoutID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.ToTable("DietPlanDB");
+                    b.HasIndex("WorkoutID");
+
+                    b.ToTable("ExerciseDb");
                 });
 
             modelBuilder.Entity("ExodusGym_DAL.Model.Meal", b =>
                 {
-                    b.Property<int>("MealID")
-                        .HasColumnType("int");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("Calories")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -163,12 +178,42 @@ namespace ExodusGym_DAL.Migrations
                     b.Property<int>("MealType")
                         .HasColumnType("int");
 
-                    b.HasKey("MealID");
+                    b.HasKey("Id");
 
                     b.ToTable("MealDB");
                 });
 
-            modelBuilder.Entity("ExodusGym_DAL.Model.WorkoutDay", b =>
+            modelBuilder.Entity("ExodusGym_DAL.Model.Workout", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Duration")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Intensity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sets")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("WorkoutDb");
+                });
+
+            modelBuilder.Entity("ExodusGym_DAL.Model.WorkoutDate", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -178,9 +223,14 @@ namespace ExodusGym_DAL.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("WorkoutID")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
-                    b.ToTable("WorkoutDayDB");
+                    b.HasIndex("WorkoutID");
+
+                    b.ToTable("WorkoutDatesDb");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -342,22 +392,18 @@ namespace ExodusGym_DAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ExodusGym_DAL.Model.DietPlan", b =>
+            modelBuilder.Entity("ExodusGym_DAL.Model.Exercise", b =>
                 {
-                    b.HasOne("ExodusGym_DAL.Model.WorkoutDay", "WorkoutDay")
-                        .WithOne("DietPlan")
-                        .HasForeignKey("ExodusGym_DAL.Model.DietPlan", "ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ExodusGym_DAL.Model.Workout", "Workout")
+                        .WithMany("Exercises")
+                        .HasForeignKey("WorkoutID");
                 });
 
-            modelBuilder.Entity("ExodusGym_DAL.Model.Meal", b =>
+            modelBuilder.Entity("ExodusGym_DAL.Model.WorkoutDate", b =>
                 {
-                    b.HasOne("ExodusGym_DAL.Model.DietPlan", "DietPlan")
-                        .WithMany("Meals")
-                        .HasForeignKey("MealID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("ExodusGym_DAL.Model.Workout", "Workout")
+                        .WithMany("Dates")
+                        .HasForeignKey("WorkoutID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
